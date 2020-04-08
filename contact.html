@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+
+form {
+	display: grid;
+  grid-template-columns: 1fr;
+  align-items: center; /* slimmed select region box height */
+  padding-right: 5rem;
+  padding-left: 5rem;
+  margin-top: 1.5rem;
+}
+
+contact-container {
+  width: 95%;
+  height: 99.5%;
+}
+
+input[type=text], select, textarea {
+  width: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text], textarea {
+  grid-column: 1 / span 3;
+}
+
+select[id=region], option {
+  grid-column: 1 / span 3;
+  width: auto;
+}
+
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type=submit]:hover {
+  background-color: #bb0000;
+}
+
+img[id=hats] {
+  display: block;
+  grid-column: 1 / span 3;
+  grid-row: 7 / 7;
+  width: -webkit-fill-available;
+  width: -moz-fill-available;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+</style>
+
+<body>
+
+  <header>
+	<h1>Contact<h2><span> work in progress </span></h2></h1>
+  </header>
+  
+  <nav>
+  	<ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="gallery1.html">Gallery</a></li>
+	  <li><a href="contact.html" class="active">Contact</a></li>
+	  <li><a href="about.html">About</a></li>
+	</ul>
+  </nav>
+
+  <main>
+
+	<contact-container>
+		<form action="php/action_page.php" method="post">
+		  <h2 style="color: black; text-align: center;">this page doesn't work yet</h2>
+			<input type="text" id="name" name="name" placeholder="Name">
+		  
+			<input type="text" id="email" name="email" placeholder="Email">
+		  
+			<select id="region" name="region">
+			  <option value="australia"> - Select region - </option>
+			  <option value="australia">Australia</option>
+			  <option value="canada">Canada</option>
+			  <option value="usa">USA</option>
+			</select>
+		  
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:110px"></textarea>
+		  
+			<input type="submit" value="Submit to me">
+
+      <img src="img/hats.jpg" id="hats" alt="hats" style="align-items: center;">
+		
+		</form>
+	</contact-container>
+
+  </main>
+
+  <footer class="footer">copyright nickg 2020</footer>
+
+</body>
+
+</html>

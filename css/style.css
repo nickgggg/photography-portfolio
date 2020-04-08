@@ -1,0 +1,257 @@
+.footer {
+  grid-area: footer;
+  background-color: black;
+  opacity: .97;
+  color: white; /* text color */
+  text-align: left;
+  padding: 2px 0 2px 4px;
+  font-size: 9px;
+}
+
+.tab {
+  text-indent:40px;
+}
+
+.about-img {
+  width: 80%;
+  height: auto;
+  justify-items: center;
+  margin-top: 2px;
+}
+
+.gallery {
+  background-color: white;
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+/*  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));*/
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* parent styling */
+body {
+  margin: 0; /* page border */
+  color: #f1f1f1;
+/*  background: repeating-radial-gradient(#1818a7 5%, #3c0404);*/
+  display: grid;
+  height: 100vh;
+  grid-template-rows: .5fr 6fr .1fr;
+  grid-template-columns: 200px 11fr;
+  grid-template-areas:
+    "header main"
+    "nav main"
+    "footer main";
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  grid-area: header;
+  margin: .5rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  color: black;
+ }
+
+/* --- 3d header ---
+	header > h1 {
+	  margin: 0;
+	  padding: 0;
+	  font-size: 40px;
+	  color: white;
+	  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey, 1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey, 5px 13px 15px black;
+	}
+--- */
+
+header > h2 {
+  margin: 0;
+  padding: 0.1rem;
+  font-style: italic;
+  color: white;
+  font-size: .8rem;
+}
+
+header > h2 span {
+  background-color: black;
+}
+
+nav {
+  grid-area: nav;
+  background-image: linear-gradient(white 5%, black 90%);
+}
+
+ul {
+  margin: 0;
+  padding: 2px;
+  }
+
+li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+li > a {
+  display: block;
+  padding: 12px 8px;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+li:hover {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+li a:hover:not(.active) {
+  display: block;
+  background-color: #555;
+  color: white;
+  transition: .25s ease;
+}
+
+ul li a.active {
+  color: white;
+  background-color: #bb0000;
+}
+
+.dropdown {
+  margin-left: 30px;
+}
+
+main {
+  grid-area: main;
+  display: grid;  
+  overflow: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+main > h2 {
+  color: black;
+  text-align: center;
+}
+main > div {
+  background-color: rgb(255,255,255, .8);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+main > div h3 {  /* about page title */
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  margin: 1rem;
+}
+
+main > div p {  /* about page text */
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  padding: 10px 30px 20px 30px;
+}
+
+/* gallery */
+main > div img {
+  display: grid;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+/* home page */
+.home-img {
+  width: 80%;
+  height: auto;
+  padding-left: 11%;
+}
+
+
+/* -------------- medium resolution scale settings -------------- */
+
+
+@media (max-width: 812px) {
+  body {
+    /*background: repeating-radial-gradient(#1818a7 5%, #3c0404);*/
+    display: grid;
+    height: 100vh;
+    grid-template-rows: .5fr .5fr 6fr .1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+
+  header {
+    margin: 0;
+  }
+  header > h1 {
+    font-size: 2em;
+  }
+
+  header > h2 {
+    padding: 0;
+    font-size: .75rem;
+  }
+
+  main > div {
+    padding: 20px 0px 20px 0px;
+  }
+  
+  .home-img {
+    width: 95%;
+    margin-left: 2.5%;
+    height: auto;
+    padding: 0;
+  }
+
+  main > h2 {
+    justify-self: center;
+  }
+
+  main > div p {
+    padding: 7px;
+  }
+
+  nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-self: center;
+  }
+
+  nav {
+    background: #f1f1f1;
+    height: -webkit-fill-available;
+  	height: -moz-fill-available;
+  }
+
+  li {
+    font-size: 15px;
+  }
+  li a {
+    padding: 16px;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding: .5rem;
+  }
+  .footer {
+    font-size: 8px;
+  }
+}
