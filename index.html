@@ -2,9 +2,23 @@
 <html lang="en">
 
 <head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<script src="js/nav.js"></script>
+
+	<style>
+		
+		.show {
+			display: grid;
+		}
+
+		.dropdown-content {
+			display: none;
+		}
+			  
+	</style>
+
 </head>
 	
 <body>
@@ -14,14 +28,20 @@
   </header>
   
   <nav>
-  	<ul class="nav">
-	  <li><a href="index.html" class="active">Home</a></li>
-	  <li><a href="gallery1.html">Gallery</a>
-	  	<ul class="dropdown">
-	  		<li><a href="#">Street</a></li>
-	  		<li><a href="#">Hats</a></li>
-	  		<li><a href="#">Sets</a></li>
-	  	</ul></li>
+  	<ul>
+		<li><a href="index.html" class="active">Home</a></li>
+		<li><a href="gallery1.html">Gallery</a>
+			<div class="dropdown" onclick="myFunction"
+				<button class="dropbtn" onclick="myFunction()">
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content" id="myDropdown">
+					<a href="#">Street</a>
+					<a href="#">Hats</a>
+					<a href="#">Sets</a>
+				</div>
+			</div>
+		</li>
 	  <li><a href="contact.html">Contact</a></li>
 	  <li><a href="about.html">About</a></li>
 	</ul>
