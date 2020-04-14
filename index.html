@@ -3,56 +3,31 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<script src="js/nav.js"></script>
-
-	<style>
-		
-		.show {
-			display: grid;
-		}
-
-		.dropdown-content {
-			display: none;
-		}
-			  
-	</style>
-
 </head>
 	
 <body>
-
   <header>
 	<h1>Welcome<h2><span>to my web portal</span></h2></h1>
   </header>
   
   <nav>
-  	<ul>
-		<li><a href="index.html" class="active">Home</a></li>
-		<li><a href="gallery1.html">Gallery</a>
-			<div class="dropdown" onclick="myFunction"
-				<button class="dropbtn" onclick="myFunction()">
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content" id="myDropdown">
-					<a href="#">Street</a>
-					<a href="#">Hats</a>
-					<a href="#">Sets</a>
-				</div>
-			</div>
-		</li>
-	  <li><a href="contact.html">Contact</a></li>
-	  <li><a href="about.html">About</a></li>
-	</ul>
+	<a href="index.html" class="active">Home</a>
+	<a href="gallery2.html">Gallery</a>
+		<!-- <a href="#">Street</a>
+		<a href="#">Hats</a>
+		<a href="#">Sets</a>		 -->
+	<a href="contact.html">Contact</a>
+	<a href="about.html">About</a>
   </nav>
 		
   <main>
-    <picture><img class="home-img" src="img/tennis.jpg" alt="tennis"></picture>
+	<div class="home">
+		<img class="home-img" src="img/tennis.jpg" alt="tennis">
+	</div>
   </main>
-
   <footer class="footer">copyright nickg 2020</footer>
-
 </body>
 
 </html>
