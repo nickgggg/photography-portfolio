@@ -1,3 +1,7 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   margin: 0;
   color: #f1f1f1;
@@ -156,7 +160,6 @@ main > div img {
   "title"
   "name"
   "email"
-  "region"
   "write"
   "submit"
   "hats";
@@ -264,7 +267,7 @@ textarea {
   .home-img {
     width: 100%;
     height: auto;
-    box-sizing: border-box;
+    padding-top: 2em;
   }
 
   main {
