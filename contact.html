@@ -5,39 +5,47 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact</title>
 </head>
-
 <body>
 
   <header>
-	  <h1>Contact<h2><span> work in progress </span></h2></h1>
+	  <h1>nick g</h1><h3><span> work in progress </span></h3>
   </header>
   
   <nav>
       <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="galleries.html">Galleries</a>
       <a href="contact.html" class="active">Contact</a>
       <a href="about.html">About</a>
   </nav>
 
   <main>
 
-	<div class="contact">
-		<form class="contact-grid" action="php/action_page.php" method="post">
-		  <div type="text" class="form-title">this page doesn't work yet. email me at njg@outlook.com</div>
-			<input type="text" class="name" name="name" placeholder="Name">
-		  
-			<input type="text" class="email" name="email" placeholder="Email">
-		  
-			<textarea class="write" name="subject" placeholder="Write something.."></textarea>
-		  
-			<input class="submit" type="submit" value="Submit to me">
-
-      <img src="img/hats.jpg" class="hats" alt="hats" style="align-items: center;">
-		
-		</form>
-	</div>
-
+      <form action="php/action_page.php" method="post">
+        <h1 class="form-title">
+          this page doesn't work yet.
+          <br><br><a href="mailto:njg@outlook.com">email me</a>
+        </h1>
+        <ul>
+          <li>
+            <label for="name"></label>
+            <input type="text" id="name" name="user_name" placeholder="Name">  
+          </li>
+          <li>
+            <label for="mail"></label>
+            <input type="text" id="mail" name="user_email" placeholder="Email">
+          </li>
+          <li>
+            <label for="msg"></label>
+            <textarea id="msg" name="user_message" placeholder="Write something..."></textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Submit</button>
+          </li>
+        </ul>
+      </form>
+  
   </main>
 
   <footer class="footer">copyright nickg 2020</footer>
