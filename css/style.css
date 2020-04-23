@@ -226,6 +226,7 @@ button {
     display: block;
     flex-wrap: wrap;
     height: -webkit-fill-available;
+    border: none;
   }
 
   header {
@@ -234,7 +235,7 @@ button {
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 97.5%;
+    width: 100%;
   }
 
   header h1 {
