@@ -6,7 +6,7 @@ body {
   margin: 0;
   color: #f1f1f1;
   display: grid;
-  height: 100vh;
+  height: 98vh;
   grid-template-rows: 1.4fr 6fr .1fr;
   grid-template-columns: .75fr 5fr;
   grid-template-areas:
@@ -14,7 +14,7 @@ body {
     "nav main"
     "footer main";
   font-family: 'Open Sans', sans-serif;
-  border: 5px solid black;
+  border: 8px solid black;
 }
 
 header {
@@ -111,6 +111,7 @@ main > h3 {
   text-align: center;
   color: black;
   padding: 10px 100px 20px 100px;
+  line-height: 1.5em;
 }
 
 .tab {
@@ -173,11 +174,15 @@ main > div img {
 .form-title {
   color: black;
   text-align: center;
+  margin: 1em;
+}
+
+h2.form-title {
+  font-size: 18px;
 }
 
 form {
-  margin: 0 auto;
-  margin-top: 4em;
+  margin: 4em auto;
   width: 90%;
 }
 
@@ -224,8 +229,7 @@ button {
 @media (max-width: 813px) {
   body {
     display: block;
-    flex-wrap: wrap;
-    height: -webkit-fill-available;
+    height: 88vh;
     border: none;
   }
 
@@ -312,10 +316,6 @@ button {
     text-align: center;
     color: black;
     padding: 0px 0px 50px 0px;
-  }
-
-  .form-title {
-    margin-top: 2em;
   }
 
   .footer {
