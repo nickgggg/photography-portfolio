@@ -10,6 +10,16 @@ justify-items: center;
 margin: auto;
 }
 
+#home a.lightbox img {
+    max-height: 100vh;
+}
+
+#sets a.lightbox img {
+    border: 1px solid black;
+    margin: .5em 0;
+}
+
+
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 
 .lightbox-target {
@@ -33,6 +43,7 @@ transition and makes it responsive using a combination of margin and absolute po
 
 .lightbox-target img{
 margin: auto;
+padding: 1em;
 position: fixed;
 top: 0;
 left:0;
@@ -40,11 +51,9 @@ right:0;
 bottom: 0;
 max-height: 0%;
 max-width: 0%;
-border: 1px solid black;
 box-sizing: border-box;
 border-radius:0px;
 }
-
 
 /* Styles the close link, adds the slide down transition */
 

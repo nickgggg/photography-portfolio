@@ -91,11 +91,6 @@ main > h3 {
   text-align: center;
 }
 
-.home {
-    padding: 40px;
-    margin: 0;
-}
-
 .about {
   padding: 20px;
 }
@@ -126,7 +121,7 @@ main > div img {
   max-width: 100%;
 }
 
-.hats {
+.banner-scroll-img {
   display: block;
   height: -webkit-fill-available;
   padding: 50px;
@@ -150,7 +145,7 @@ main > div img {
   bottom: 0;
 }
 
-/* -------------- gallery menu styling -------------- */
+/* -------------- gallery page -------------- */
 
 .gallery-boxes {
   display: grid;
@@ -160,12 +155,12 @@ main > div img {
 }
 
 .gallery-boxes a {
-  margin: 2.5em;
-  padding: 7em;
+  margin: 2em;
+  padding: 5em;
   display: block;
   text-align: center;
   text-decoration: none;
-  border: 1px solid grey;
+  border: 1px solid darkgoldenrod;
   color: black;
 }
 
@@ -276,12 +271,6 @@ button {
     width: -webkit-fill-available;
   }
 
-  .home-img {
-    width: 100%;
-    height: auto;
-    padding-top: 2em;
-  }
-
   main {
     min-height: -webkit-fill-available;
     margin: 0 auto;
@@ -291,24 +280,33 @@ button {
     padding: 7px;
   }
 
-  .hats {
+  .banner-scroll-img {
     height: 95vh;
     padding: 10px;
   }
 
   .gallery {
     grid-template-columns: 1fr 1fr;
-    gap: .5rem;
+    gap: 1rem;
     padding: 5px;
     margin: 1em 0 1em 0;
   }
 
-  .gallery-boxes {
-    display: block;
+  .gallery#home {
+    grid-template-columns: 1fr;
   }
 
+  /* .gallery#sets {
+    grid-template-columns: 1fr;
+  } */
+
   .gallery-boxes a {
-    padding: 6em;
+    padding: 4em 2em;
+    margin: 1em 1em;
+  }
+
+  .about {
+    padding-top: 5em;
   }
 
   .about-text {  /* about page text */
