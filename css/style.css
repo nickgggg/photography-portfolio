@@ -144,6 +144,10 @@ main > div img {
   align-items: center;
 }
 
+.gallery#sets {
+  background-color: black;
+}
+
 .footer {
   color:black;
   padding: 3px;
@@ -299,8 +303,7 @@ button {
   .gallery {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    padding: 5px;
-    margin: 1em 0 1em 0;
+    padding: 1em 5px 1em 5px;
   }
   .gallery-boxes {
     display: grid;

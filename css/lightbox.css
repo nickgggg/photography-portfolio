@@ -43,7 +43,7 @@ transition and makes it responsive using a combination of margin and absolute po
 
 .lightbox-target img{
 margin: auto;
-padding: 1em;
+/* padding: 1em; */
 position: fixed;
 top: 0;
 left:0;
