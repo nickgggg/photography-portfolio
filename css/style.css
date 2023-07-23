@@ -1,10 +1,12 @@
 html {
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  letter-spacing: .015rem;
+  /* text-shadow: 0.1rem 0.1rem .8rem black; */
 }
 
 body {
   margin: 0;
-  color: #f1f1f1;
+  background-color: #ffebad;
   display: grid;
   height: 98vh;
   grid-template-rows: 1.4fr 6fr .1fr;
@@ -13,7 +15,6 @@ body {
     "header main"
     "nav main"
     "footer main";
-  font-family: 'Open Sans', sans-serif;
   border: 8px solid black;
 }
 
@@ -39,6 +40,7 @@ header > h3 {
   font-style: italic;
   color: white;
   font-size: .8rem;
+  text-shadow: none;
 }
 
 header > h3 span {
@@ -67,15 +69,17 @@ nav a:hover {
 
 nav a:hover:not(.active) {
   display: block;
-  background-color: #555;
+  background-color: #222;
   color: white;
   transition: .25s ease;
 }
 
 nav a.active {
   color: white;
-  background-color: #555;
+  background-color: black;
   font-style: italic;
+  font-weight: lighter;
+  text-shadow: none;
 }
 
 main {
@@ -92,8 +96,9 @@ main > h3 {
 }
 
 .about {
-  padding: 20px;
-  display: grid;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 .about-title  {
   font-size: 24px;
@@ -103,10 +108,8 @@ main > h3 {
 }
 
 .about-text {  /* about page text */
-  font-size: 14px;
   text-align: center;
-  color: black;
-  padding: 10px 100px 20px 100px;
+  padding: 0em 5em 0em 5em;
   line-height: 1.5em;
 }
 
@@ -115,11 +118,7 @@ main > h3 {
 }
 
 .about-img {
-  max-height: 50vh;
-  width: auto;
-  margin-top: 2em;
-  justify-items: center;
-  align-items: middle;
+  padding: 5em;
 }
 
 main > div img {
@@ -131,9 +130,8 @@ main > div img {
 }
 
 .banner-scroll-img {
-  display: block;
-  height: -webkit-fill-available;
-  padding: 50px;
+  max-height: 90vh;
+  margin: 1em;
 }
 
 .gallery {
@@ -144,12 +142,68 @@ main > div img {
   align-items: center;
 }
 
-.gallery#sets {
-  background-color: black;
+.gallery-boxes a#street {
+  font-variant: petite-caps;
+}
+
+.gallery-boxes a#hats {
+  text-decoration: overline 1px wavy;
+}
+.gallery-boxes a#hats div {
+  border-top: 2px solid;
+}
+
+.gallery-boxes a#blur {
+  text-shadow: 0 0 12px black;
+}
+.gallery-boxes a#inanimate {
+  font-variant: all-small-caps;
+  font-family: monospace;
+}
+.gallery-boxes a#sets {
+  font-variant-caps: all-small-caps;
+}
+.gallery-boxes a#sets div {
+  background-color: white;
+  padding: 1em;
+}
+.gallery-boxes a#sets div span {
+  padding: .25em;
+  margin: .25em;
+  border: 1px solid;
+}
+
+.gallery-boxes a#self {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-boxes a#self:after {
+  content:"Self";
+  transform: rotate(180deg) scaleX(-1);
+  opacity:0.5;
+  font-style: italic;
+}
+
+.gallery-boxes a#sleep {
+  font-style: italic;
+  border: 1px solid black wavy;
+}
+
+.gallery-boxes a#walkers {
+  letter-spacing: 2px;
+}
+.gallery-boxes a#walkers div span:nth-child(odd) {
+  vertical-align: text-top;
+}
+.gallery-boxes a#walkers div span:nth-child(even) {
+  vertical-align: text-bottom;
+}
+
+.gallery-boxes a#midway-city {
+  text-decoration: line-through 2px #ffebad;
 }
 
 .footer {
-  color:black;
   padding: 3px;
   margin: 0;
   font-size: 9px;
@@ -181,16 +235,13 @@ main > div img {
 
 /* -------------- contact form styling -------------- */
 
-.form-title {
-  color: black;
-  text-align: center;
-  margin: 1em;
+.contact-text {
+  display: flex;
+  align-items: center;
 }
-
-h2.form-title {
-  font-size: 18px;
+h1.form-title {
+  font-style: normal;
 }
-
 form {
   margin: 4em auto;
   width: 90%;
@@ -238,15 +289,15 @@ button {
 
 @media (max-width: 813px) {
   body {
-    display: block;
-    height: 88vh;
+    display: flex;
+    flex-direction: column;
     border: none;
+    height: 100vh;
   }
 
   header {
     border-right: none;
     padding: 0;
-    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -267,10 +318,8 @@ button {
 
   nav {
     display: flex;
-    position: sticky;
     border-right: none;
     border-bottom: 1px solid black;
-    padding-top: 10%;
   }
 
   nav a {
@@ -287,24 +336,33 @@ button {
   }
 
   main {
-    min-height: -webkit-fill-available;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 88vh;
   }
 
   main > div p {
     padding: 7px;
   }
 
-  .banner-scroll-img {
-    height: 95vh;
-    padding: 10px;
+  #home a.lightbox img {
+    max-height: 100vh;
   }
 
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding: 1em 5px 1em 5px;
+  .banner-scroll-img {
+    align-self: flex-start;
+    margin: 1rem;
+    height: 95%;
   }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    min-height: 100%;
+    height: -webkit-fill-available;
+  }
+
   .gallery-boxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -315,12 +373,17 @@ button {
   } */
 
   .gallery-boxes a {
-    padding: 4em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
     margin: 1em 1em;
+    height: 2rem;
+    width: 6rem;
   }
 
-  .about {
-    padding-top: 5em;
+  a.lightbox img {
+    max-height: 100%;
   }
 
   .about-text {  /* about page text */
@@ -330,7 +393,12 @@ button {
     padding: 0px 0px 50px 0px;
   }
 
+  .about-img {
+    padding: 1em;
+  }
+
   .footer {
     border-right: none;
+    height: 2vh;
   }
 }
