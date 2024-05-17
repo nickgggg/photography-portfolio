@@ -292,14 +292,13 @@ button {
     display: flex;
     flex-direction: column;
     border: none;
-    height: 100vh;
   }
 
   header {
     border-right: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -311,9 +310,8 @@ button {
   }
 
   header h3 {
-    float: right;
-    padding: 5px;
     text-align: end;
+    width: 50%;
   }
 
   nav {
@@ -339,7 +337,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 88vh;
+    height: -webkit-fill-available;
+    overflow: overlay;
   }
 
   main > div p {
@@ -368,10 +367,6 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* .gallery#sets {
-    grid-template-columns: 1fr;
-  } */
-
   .gallery-boxes a {
     display: flex;
     justify-content: center;
@@ -386,7 +381,7 @@ button {
     max-height: 100%;
   }
 
-  .about-text {  /* about page text */
+  .about-text {
     font-size: 14px;
     text-align: center;
     color: black;
@@ -399,6 +394,5 @@ button {
 
   .footer {
     border-right: none;
-    height: 2vh;
   }
 }
